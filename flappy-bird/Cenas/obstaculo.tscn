@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddoen5a0w4ury"]
+
+[ext_resource type="PackedScene" uid="uid://b60ic0l37p60u" path="res://Cenas/obstaculo_cano.tscn" id="1_q7004"]
+[ext_resource type="Script" uid="uid://yjx843cgsyvk" path="res://Cenas/zona_ponto.gd" id="2_jo2yb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phkyr"]
+size = Vector2(54.5, 199)
+
+[node name="Obstaculo" type="Node2D"]
+
+[node name="CanoCima" parent="." instance=ExtResource("1_q7004")]
+
+[node name="CanoBaixo" parent="." instance=ExtResource("1_q7004")]
+position = Vector2(3, 540)
+
+[node name="ZonaPonto" type="Area2D" parent="."]
+script = ExtResource("2_jo2yb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaPonto"]
+position = Vector2(20.25, 434.5)
+shape = SubResource("RectangleShape2D_phkyr")
+debug_color = Color(0.00392157, 1, 0.32549, 0.419608)
+
+[connection signal="body_entered" from="ZonaPonto" to="ZonaPonto" method="_on_body_entered"]

@@ -1,29 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmhuusfmbu62n"]
+[gd_scene load_steps=4 format=3 uid="uid://dmhuusfmbu62n"]
 
-[ext_resource type="PackedScene" uid="uid://b60ic0l37p60u" path="res://Cenas/obstaculo_cano.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://ypc3gfqpnk4k" path="res://Cenas/Jogador/jogador.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://ddoen5a0w4ury" path="res://Cenas/obstaculo.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://biw7irp1u3d2o" path="res://hud.tscn" id="3_feb5d"]
 
 [node name="Game" type="Node2D"]
 
 [node name="Obstaculos" type="Node" parent="."]
 
-[node name="ObstaculoCano" parent="Obstaculos" instance=ExtResource("1_80nbo")]
-position = Vector2(386, 425)
+[node name="Obstaculo" parent="Obstaculos" instance=ExtResource("2_feb5d")]
+position = Vector2(246, -94)
 
-[node name="ObstaculoCano2" parent="Obstaculos" instance=ExtResource("1_80nbo")]
-position = Vector2(384, -56)
+[node name="Obstaculo2" parent="Obstaculos" instance=ExtResource("2_feb5d")]
+position = Vector2(409, -94)
 
-[node name="ObstaculoCano3" parent="Obstaculos" instance=ExtResource("1_80nbo")]
-position = Vector2(520, -95)
+[node name="Obstaculo3" parent="Obstaculos" instance=ExtResource("2_feb5d")]
+position = Vector2(549, -97)
 
-[node name="ObstaculoCano4" parent="Obstaculos" instance=ExtResource("1_80nbo")]
-position = Vector2(523, 368)
+[node name="Obstaculo4" parent="Obstaculos" instance=ExtResource("2_feb5d")]
+position = Vector2(697, -77)
 
-[node name="ObstaculoCano5" parent="Obstaculos" instance=ExtResource("1_80nbo")]
-position = Vector2(686, 408)
-
-[node name="ObstaculoCano6" parent="Obstaculos" instance=ExtResource("1_80nbo")]
-position = Vector2(684, -53)
+[node name="Obstaculo5" parent="Obstaculos" instance=ExtResource("2_feb5d")]
+position = Vector2(843, -71)
 
 [node name="Jogador" parent="." instance=ExtResource("2_e2o6t")]
 position = Vector2(50, 343)
+
+[node name="HUD" parent="." instance=ExtResource("3_feb5d")]
