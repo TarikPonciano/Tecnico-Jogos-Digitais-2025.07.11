@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmhuusfmbu62n"]
+
+[ext_resource type="PackedScene" uid="uid://b60ic0l37p60u" path="res://Cenas/obstaculo_cano.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ypc3gfqpnk4k" path="res://Cenas/Jogador/jogador.tscn" id="2_e2o6t"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Obstaculos" type="Node" parent="."]
+
+[node name="ObstaculoCano" parent="Obstaculos" instance=ExtResource("1_80nbo")]
+position = Vector2(386, 425)
+
+[node name="ObstaculoCano2" parent="Obstaculos" instance=ExtResource("1_80nbo")]
+position = Vector2(384, -56)
+
+[node name="ObstaculoCano3" parent="Obstaculos" instance=ExtResource("1_80nbo")]
+position = Vector2(520, -95)
+
+[node name="ObstaculoCano4" parent="Obstaculos" instance=ExtResource("1_80nbo")]
+position = Vector2(523, 368)
+
+[node name="ObstaculoCano5" parent="Obstaculos" instance=ExtResource("1_80nbo")]
+position = Vector2(686, 408)
+
+[node name="ObstaculoCano6" parent="Obstaculos" instance=ExtResource("1_80nbo")]
+position = Vector2(684, -53)
+
+[node name="Jogador" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(50, 343)
