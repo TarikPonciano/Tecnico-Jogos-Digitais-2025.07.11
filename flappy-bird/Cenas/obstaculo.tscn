@@ -9,11 +9,13 @@ size = Vector2(54.5, 199)
 [node name="Obstaculo" type="Node2D"]
 
 [node name="CanoCima" parent="." instance=ExtResource("1_q7004")]
+position = Vector2(3, -49)
 
 [node name="CanoBaixo" parent="." instance=ExtResource("1_q7004")]
 position = Vector2(3, 540)
 
 [node name="ZonaPonto" type="Area2D" parent="."]
+position = Vector2(-2, -1)
 script = ExtResource("2_jo2yb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaPonto"]

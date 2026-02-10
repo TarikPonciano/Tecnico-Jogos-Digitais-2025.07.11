@@ -14,5 +14,6 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Jogador":
 		Global.pontos += 1
-		
 		print(Global.pontos)
+		
+		get_parent().get_parent().criar_cano()
