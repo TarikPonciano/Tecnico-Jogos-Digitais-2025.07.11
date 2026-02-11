@@ -12,6 +12,7 @@ func _physics_process(delta: float) -> void:
 	# Código para aumentar altitude (pulo do jogador)
 	if Input.is_action_just_pressed("ui_accept"):
 		velocity.y = JUMP_VELOCITY
+		$"UXg7Ssi08Yr-boing-379665".play(1)
 
 	# Movimentação horizontal constante
 	velocity.x = SPEED

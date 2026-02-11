@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://brlkxychwx3ox"]
+
+[ext_resource type="Script" uid="uid://b6e6b351wxyqf" path="res://control.gd" id="1_icihg"]
+
+[node name="Tela de Morte" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_icihg")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 112.0
+offset_right = 793.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 32
+text = "SE LASCOU! VOCÊ PERDEU!"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 216.0
+offset_right = 570.0
+offset_bottom = 250.0
+theme_override_font_sizes/font_size = 24
+text = "Pontuação:"
+
+[node name="Label3" type="Label" parent="Panel"]
+offset_left = 440.0
+offset_top = 280.0
+offset_right = 645.0
+offset_bottom = 314.0
+theme_override_font_sizes/font_size = 24
+text = "Maior Pontuação:"
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 480.0
+offset_right = 752.0
+offset_bottom = 538.0
+theme_override_font_sizes/font_size = 36
+text = "Ir Para o Menu"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
