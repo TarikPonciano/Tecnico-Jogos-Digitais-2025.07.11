@@ -4,6 +4,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Panel/Label2.text = "Pontuação: " + str(Global.pontos)
+	$Panel/Label3.text = "Maior Pontuação: " + str(Global.maior_pontos)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

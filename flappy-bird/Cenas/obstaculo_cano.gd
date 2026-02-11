@@ -16,6 +16,7 @@ func _on_zona_morte_body_entered(body: Node2D) -> void:
 	if body.name == "Jogador":
 		# Apagar Jogador
 		# body.queue_free()
-		
+		if Global.pontos > Global.maior_pontos:
+			Global.maior_pontos = Global.pontos
 		# Troca para a tela de morte
 		get_tree().change_scene_to_file("res://Cenas/tela_de_morte.tscn")
