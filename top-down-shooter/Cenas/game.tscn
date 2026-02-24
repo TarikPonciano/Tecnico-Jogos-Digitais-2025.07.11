@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://d1w4om3rvl4nx"]
+
+[ext_resource type="PackedScene" uid="uid://c1aoiexa815d1" path="res://Cenas/jogador.tscn" id="1_fd8wr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2x6i"]
+size = Vector2(2304, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fd8wr"]
+size = Vector2(20, 1296)
+
+[node name="Game" type="Node2D" unique_id=1276612791]
+
+[node name="Chão" type="ColorRect" parent="." unique_id=807615632]
+offset_right = 2304.0
+offset_bottom = 1296.0
+color = Color(0, 0, 0, 0.42352942)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=656795530]
+position = Vector2(1152, 648)
+zoom = Vector2(0.5, 0.5)
+
+[node name="Parede Norte" type="StaticBody2D" parent="." unique_id=1789323365]
+position = Vector2(1151, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede Norte" unique_id=559416531]
+shape = SubResource("RectangleShape2D_n2x6i")
+
+[node name="Parede Sul" type="StaticBody2D" parent="." unique_id=1482270467]
+position = Vector2(1151, 1292)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede Sul" unique_id=2130353604]
+shape = SubResource("RectangleShape2D_n2x6i")
+
+[node name="Parede Oeste" type="StaticBody2D" parent="." unique_id=312595790]
+position = Vector2(0, 648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede Oeste" unique_id=954315998]
+shape = SubResource("RectangleShape2D_fd8wr")
+
+[node name="Parede Leste" type="StaticBody2D" parent="." unique_id=131698592]
+position = Vector2(2291, 648)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Parede Leste" unique_id=626448917]
+shape = SubResource("RectangleShape2D_fd8wr")
+
+[node name="Label" type="Label" parent="." unique_id=584090540]
+visible = false
+offset_left = -44.0
+offset_top = 199.0
+offset_right = 2441.0
+offset_bottom = 896.0
+theme_override_font_sizes/font_size = 100
+text = "CRIAR CENA JOGADOR
+
+INSERIR UMA IMAGEM E COLISÃO PARA O JOGADOR
+
+IMPLEMENTAR MOVIMENTAÇÃO TOP DOWN"
+
+[node name="Jogador" parent="." unique_id=2146596580 instance=ExtResource("1_fd8wr")]
+position = Vector2(1205, 498)
