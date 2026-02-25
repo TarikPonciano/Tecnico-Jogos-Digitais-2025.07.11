@@ -38,6 +38,7 @@ theme_override_font_sizes/font_size = 24
 text = "Pontuação:"
 
 [node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
 offset_left = 440.0
 offset_top = 280.0
 offset_right = 645.0

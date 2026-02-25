@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmhuusfmbu62n"]
+[gd_scene load_steps=6 format=3 uid="uid://dmhuusfmbu62n"]
 
 [ext_resource type="Script" uid="uid://b0j7okpckx1xe" path="res://game.gd" id="1_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://ypc3gfqpnk4k" path="res://Cenas/Jogador/jogador.tscn" id="2_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://ddoen5a0w4ury" path="res://Cenas/obstaculo.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://biw7irp1u3d2o" path="res://hud.tscn" id="3_feb5d"]
+[ext_resource type="Texture2D" uid="uid://bbd768jl4ksxp" path="res://flappy_bird_app_bg_only.png" id="5_7jktm"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_fc0e3")
-metadata/_edit_vertical_guides_ = [470.0]
 
 [node name="Jogador" parent="." instance=ExtResource("2_e2o6t")]
 position = Vector2(-286, 324)
@@ -37,3 +37,12 @@ position = Vector2(1540, -85)
 
 [node name="Obstaculo8" parent="." instance=ExtResource("2_feb5d")]
 position = Vector2(1760, 75)
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="Background"]
+z_index = -2
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.718125, 0.641304)
+texture = ExtResource("5_7jktm")
