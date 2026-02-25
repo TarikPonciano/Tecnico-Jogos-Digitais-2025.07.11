@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 #const JUMP_VELOCITY = -400.0
+
 @export var cena_projetil : PackedScene
 @onready var emissor_projetil = $"Emissor Projetil"
 
