@@ -3,7 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 500.0
 #const JUMP_VELOCITY = -400.0
-
+@export var cena_projetil : PackedScene
+@onready var emissor_projetil = $"Emissor Projetil"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -17,8 +18,15 @@ func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
+	# Ao apertar espaço cria a bala e posiciona ela no mundo
+	if Input.is_action_just_pressed("ui_accept"):
+		var nova_bala = cena_projetil.instantiate()
+		nova_bala.position = emissor_projetil.global_position
+		get_parent().add_child(nova_bala)
+	
 	
 	var direction := Input.get_vector("ui_left", "ui_right","ui_up","ui_down")
+	
 	if direction:
 		velocity = direction * SPEED
 	else:

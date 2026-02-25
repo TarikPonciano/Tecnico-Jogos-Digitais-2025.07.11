@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dm88088m0kv5l"]
+
+[ext_resource type="Script" uid="uid://cdv6qly24d4g2" path="res://Cenas/projetil_basico.gd" id="1_r6mqh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhkr4"]
+size = Vector2(40, 13)
+
+[node name="Projetil Basico" type="Area2D" unique_id=731717194]
+script = ExtResource("1_r6mqh")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=988124514]
+offset_right = 40.0
+offset_bottom = 13.0
+color = Color(1, 1, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=72205357]
+position = Vector2(20, 6.5)
+shape = SubResource("RectangleShape2D_dhkr4")
+
+[node name="Label" type="Label" parent="." unique_id=1655195440]
+visible = false
+offset_left = 8.0
+offset_top = 18.0
+offset_right = 536.0
+offset_bottom = 145.0
+text = "Criar o projetil com Sprite e Colisão
+
+Inserir o projetil na fase
+
+Criar um script que faz com que o projetil se mova por conta própria"
